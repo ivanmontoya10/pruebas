@@ -1,21 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-// test('search click', async ({ page }) => {
-//   await page.goto('https://aguascalientes.tecnm.mx/');
-
-//   // Expect a title "to contain" a substring.
-//   await expect(page).toHaveTitle(/TecNM campus Aguascalientes/);
-//   await page.waitForLoadState('networkidle')
-//   const emailLink= page.locator('a[href*="https://login.microsoftonline.com/?whr=tecnm.mx"][title="Correo Institucional"]')
-//   await expect(emailLink).toBeVisible();
-//   const [newPage]= await Promise.all([
-//     page.waitForEvent('popup'),
-//     emailLink.click()
-//   ])  
-//   await expect(newPage).toHaveURL(/.*login\.microsoftonline\.com/);
-//   await page.pause()
-// });
-
 test('test2', async({ page })=>{
   await page.goto('https://www.amazon.com.mx/');
   await expect(page).toHaveTitle(/Amazon.com.mx: Precios bajos - Envío rápido - Millones de productos/);
@@ -36,14 +20,3 @@ test('test2', async({ page })=>{
   await buyInput.click();
   await page.pause()
 });
-
-
-// test('get started link', async ({ page }) => {
-//   await page.goto('https://playwright.dev/');
-
-//   // Click the get started link.
-//   await page.getByRole('link', { name: 'Get started' }).click();
-
-//   // Expects page to have a heading with the name of Installation.
-//   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-// });
